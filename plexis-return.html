@@ -1,0 +1,286 @@
+<!-- Start htmlHead.jsp -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<title>Plexis</title>
+
+<!-- SOCIAL -------------------------------------------------------------->
+
+
+
+<!-- CSS -------------------------------------------------------------->
+
+<link rel="stylesheet" href="http://case.am/plexis/css/normalize.css" />
+
+<meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<link rel="stylesheet" media="only screen and (min-width: 640px)" href="http://case.am/plexis/css/global.css" />
+<link rel="stylesheet" media="only screen and (max-width: 640px)" href="http://case.am/plexis/css/mobile.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300' rel='stylesheet' type='text/css'>
+
+<!-- JS -------------------------------------------------------------->
+
+</head>
+
+
+
+
+
+<body>
+<div class="mobile-header mobile">
+	<h3>Case Sandberg</h3>
+	<div class="button left back"><div class="icon"><</div></div>
+	<div class="right bucket-wrap"><div class="button right menu"><div class="icon">=</div></div></div>
+</div>
+
+<div id="wrapper" class="clearfix">
+
+<ul class="buckets-list" id="buckets">
+
+	<li class="bucket-handle all" id="bucket-0-handle" data-id="bucket-0">
+		<div class="head">A</div>
+		<div class="label">All</div>
+	</li>
+	
+	<li class="bucket-handle" id="bucket-1-handle" data-id="bucket-1">
+		<div class="head">S</div>
+		<div class="label">School</div>
+	</li>
+	
+	<li class="bucket-handle" id="bucket-2-handle" data-id="bucket-2">
+		<div class="head">C</div>
+		<div class="label">Coding</div>
+	</li>
+	
+	<li class="bucket-handle" id="bucket-3-handle" data-id="bucket-3">
+		<div class="head">W</div>
+		<div class="label">Work</div>
+	</li>
+</ul>
+
+<div id="input">
+	<input type="text" placeholder="Message...">
+</div>
+
+<ul class="desktop-menu desktop">
+	<li class="logo">Plexis</li>
+	<li class="new"><input type="text" placeholder="Start a New Chat..."></li>
+	
+	<li class="conversation">
+		<div class="circle" style="background-image: url('http://25.media.tumblr.com/avatar_36610a525b3b_128.png');"></div>
+		<div class="circle-border"></div>
+		<h2>James Stanford</h2>
+		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+	</li>
+	<li class="conversation active">
+		<div class="circle" style="background-image: url('http://24.media.tumblr.com/avatar_cd001e9bd984_128.png');"></div>
+		<div class="circle-border"></div>
+		<h2>Case Sandberg</h2>
+		<span>Consequatur porro optio libero eveniet tenetur inventore.</span>
+	</li>
+	
+	<li class="conversation">
+		<div class="circle" style="background-image: url('http://www.avatarsdb.com/avatars/nicolas_cage_2.jpg');"></div>
+		<div class="circle-border"></div>
+		<h2>John Doe</h2>
+		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur porro optio libero eveniet tenetur inventore.</span>
+	</li>
+	
+	<li class="conversation">
+		<div class="circle" style="background-image: url('http://24.media.tumblr.com/avatar_72f36b0f112e_128.png');"></div>
+		<div class="circle-border"></div>
+		<h2>Spencer Bateman</h2>
+		<span>Consequatur porro optio libero eveniet tenetur inventore.</span>
+	</li>
+	
+	<li class="conversation">
+		<div class="circle" style="background-image: url('http://3.bp.blogspot.com/_0f7Muu8izqA/S3vtjujfd3I/AAAAAAAACRw/S-yTboPfCRY/s320/LAURENHEPPELLniccage_boosh.jpg');"></div>
+		<div class="circle-border"></div>
+		<h2>Trevor Yarnall</h2>
+		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur porro optio libero eveniet tenetur inventore.</span>
+	</li>
+</ul>
+
+
+
+{{> page}}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+<script>
+
+if ($(window).width() < 640) {
+
+(function(b){b.support.touch="ontouchend" in document;if(!b.support.touch){return;}var c=b.ui.mouse.prototype,e=c._mouseInit,a;function d(g,h){if(g.originalEvent.touches.length>1){return;}g.preventDefault();var i=g.originalEvent.changedTouches[0],f=document.createEvent("MouseEvents");f.initMouseEvent(h,true,true,window,1,i.screenX,i.screenY,i.clientX,i.clientY,false,false,false,false,0,null);g.target.dispatchEvent(f);}c._touchStart=function(g){var f=this;if(a||!f._mouseCapture(g.originalEvent.changedTouches[0])){return;}a=true;f._touchMoved=false;d(g,"mouseover");d(g,"mousemove");d(g,"mousedown");};c._touchMove=function(f){if(!a){return;}this._touchMoved=true;d(f,"mousemove");};c._touchEnd=function(f){if(!a){return;}d(f,"mouseup");d(f,"mouseout");if(!this._touchMoved){d(f,"click");}a=false;};c._mouseInit=function(){var f=this;f.element.bind("touchstart",b.proxy(f,"_touchStart")).bind("touchmove",b.proxy(f,"_touchMove")).bind("touchend",b.proxy(f,"_touchEnd"));e.call(f);};})(jQuery);
+
+
+	$('#buckets li').click(function() {
+		var $bucketID = $(this).attr("data-id");
+		
+		$('.bucket').fadeOut(200);
+				
+		$('#' + $bucketID + ', #' + $bucketID + ' .chat ').delay(200).fadeIn(200);
+	
+	});
+	
+	$('.chat.head').click(function() {
+		var $chatBucketID = $(this).attr("data-type");
+		
+		var $selector = $(this).parent().children('.chat[data-type!=' + $chatBucketID +']');
+		
+		
+		
+		$selector.each(function() {
+			var $height = $(this).outerHeight();
+			$(this).css('height', $height);
+		});
+		
+		$selector.css("opacity","0").delay(100).css("height","0").animate({marginBottom: 0, scrollTop: 0}, '200', function() {
+        	$(this).css({"opacity":"1", "height":"auto", "marginBottom":"10px" }).hide();
+		});
+		
+		$("html, body").delay(100).animate({ scrollTop: 0 }, 400);
+		
+		$('#' + $chatBucketID ).delay(200).fadeIn(200);
+	
+	});
+	
+	$('#input .input').click(function() {
+		$("html, body").delay(100).animate({ scrollTop: 0 }, 200);
+	});
+	
+	
+	$(document).ready(function () {
+	
+	$("html, body").animate({ scrollTop: $(document).height() }, "fast");
+	
+		$('.bucket .chat.draggable').draggable({
+			start: handleDragStart,
+		    cursor: 'move',
+		    revert: 'invalid',
+		    stop: handleDragStop,
+		  });
+	
+	
+		$("#buckets li").droppable({
+	        drop: function(event, ui) {
+	            $transferBucket = $(this).attr("data-id");
+	            ui.draggable.attr("data-type", $transferBucket);
+	            ui.draggable.draggable('option','revert',true);
+	        }
+	        
+	    });
+	    
+	    $('div').bind("dragstart", function(event, ui){
+        event.stopPropagation();
+        });
+    
+    
+	});
+	
+	function handleDragStop( event, ui ) {
+		$('#buckets').removeClass('open');
+	}
+	function handleDragStart( event, ui ) {
+		$('#buckets').addClass('open');
+	}
+
+} else{
+
+$('#buckets li').click(function() {
+		var $bucketID = $(this).attr("data-id");
+		var x = $('#' + $bucketID).offset().left;
+		var $window = $(window);
+		var $windowHalf = $window.width()/2-150;
+		
+		$('html, body').animate({scrollLeft: (x - $windowHalf)}, 800);
+	
+      //var currentElement = currentElement.next();
+      //$('html, body').animate({scrollLeft: $(currentElement).offset().left}, 800);
+      //return false;
+   }); 
+	
+}
+
+	
+</script>
+</div>
+
+</body>
+
+<template name="page">
+	<div id="login" style="float: right;">{{> login}}</div>
+	<div id="user">{{> user}}</div>
+	<div id="conversation">{{> conversation}}</div>
+	<div id="register">{{> register}}</div>
+	<div id="logout">{{> logout}}</div>
+</template>
+
+<template name="user">
+	User: {{user}}
+</template>
+
+<template name="logout">
+	<input type="submit" id="sign-out" value="Sign out" />
+
+</template>
+
+<template name="conversation">
+	
+	{{#if branches}}
+		{{#each branches}}
+			<ul class="bucket" id="bucket-{{branchId}}" data-branchid="{{branchId}}">
+				<li class="title desktop"><h3>Yash Plorer</h3></li>
+				BRANCH {{branchId}}
+			{{#each messages}}
+			
+			<li class="chat you" id="{{_id}}" data-type="bucket-{{branchId}}" data-parentid="{{parentId}}" data-branchId="{{branchId}}">
+				<span class="username">{{username}}</span>
+				<p class="message-text">{{message}} </p>
+				<span class="time">At {{timestamp}}</span>
+				<input type="hidden" class="owner" value={{owner}}>
+				<a class="branch-link" href="#">Branch</a>
+				<div class="bucket-color"></div>
+			</li>
+				 
+			{{/each}}
+				<li class="reply desktop"><input id="message-branch-{{branchId}}" class="message" type="text" placeholder="Reply to Yash Plorer..."></li>
+				<input id="submit-branch-{{branchId}}" class="submit" type="submit"/>
+			</ul>
+		{{/each}}
+	{{else}}
+		<div class="branch" data-branchid="0">
+			<p id="notice">Get this chat started</p>
+			<input id="message-branch-0" class="message" type="text" placeholder="Type message here"/>
+			<input id="submit-branch-0" class="submit" type="submit"/>
+		</div>
+	{{/if}}
+
+</template>
+
+<template name="register">
+	<div class="register-form">
+		<input type="email" placeholder="email" id="account-email" />
+		<input type="password" placeholder="password" id="account-password" />
+		<input type="full-name" placeholder="screen name" id="account-name" />
+		<input type="submit" id="create-account" value="Create an Account" />
+	</div>
+</template>
+
+<template name="login">
+	<div class="login-form">    
+		<input type="email" placeholder="email" id="login-email" />
+		<input type="password" placeholder="password" id="login-password" />
+		<input type="submit" id="login-button" value="Sign in" />
+		or
+		<input type="submit" id="create-user" value="Sign up" />
+	</div>
+</template>
+

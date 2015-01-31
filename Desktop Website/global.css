@@ -1,0 +1,478 @@
+h1 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 100;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+}
+
+h2 {
+	font-family: 'Roboto Slab', sans-serif;
+}
+
+/*convoRules*/
+	.convo > li {
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.convo > li > p {
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #bbb;
+		border-top-style: solid;
+		border-top-width: 1px;
+		border-top-color: #eee;
+	}
+
+	.convo > li > div {
+		margin-top: -17px;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-color: #bbb transparent transparent transparent;
+		display: inline;
+		position: absolute;
+	}
+
+	#userA > span {
+		display: inline;
+		position: absolute;
+		width: 100%;
+		height: 30px;
+	}
+
+	#message {
+		font-family: 'Open Sans', sans-serif;
+		display: inline;
+		position: absolute;
+		width: 80%;
+		height: 22.5px;
+		left: 0;
+	}
+
+	#send {
+		height: 30px;
+		width: 30px;
+		border: none;
+		border-style: none;
+		padding:0;
+		background: url('img/send.png');
+		background-size: 100%;
+		display: inline;
+		position: absolute;
+		right:20px;
+	}
+/*userList*/
+	#userList {
+		width: 20%;
+		text-decoration: none;
+		left: 0;
+		position: absolute;
+		display: inline;
+		padding-left: 10px;
+	}
+
+	#userList > li:nth-child(3)
+	#userList > li:nth-child(4)
+	#userList > li:nth-child(5)
+	#userList > li:nth-child(6)
+	#userList > li:nth-child(3)
+	#userList > li:nth-child(3)
+	#userList > li:nth-child(7) {
+		width: 100%;
+		background-color: #eee;
+		list-style-type: none;
+		border-bottom-color: #ddd;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+	}
+
+	#userList > li:hover {
+		background-color: #ddd;
+	}
+
+	#logo {
+		text-align: center;
+		border-style: none;
+		border-color: transparent;
+		background-color: #aaa;
+	}
+
+	#userList > li > img {
+		height: 75px;
+		width: 150px;
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	#active {
+		background-color: #ccc;
+		border-bottom-color: #bbb;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+
+	#newUser {
+		width: 100%;
+		background-color: #eee;
+		list-style-type: none;
+		border-bottom-color: #ddd;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		height: 30px;
+		line-height: 50px;
+	}
+
+	#compose {
+		width: 100%;
+		font-family: 'Roboto Slab', sans-serif;
+		display: inline;
+		position: absolute;
+		width: 96.5%;
+		font-size: 30px;
+		font-weight: 100;
+	}
+/*parentConvo*/
+	#yashplorer {
+		display: inline;
+		position: absolute;
+		margin-top: 0px;
+		margin-left: 20%;
+		left: 25px;
+		width: 20%;
+		color: black;
+		text-align: center;
+		height: 50px;
+		padding-top: 10px;
+   		border-bottom-color: #ddd;
+		border-bottom-style: solid;
+		border-bottom-width: 3px;
+	}
+
+	#parentConvo {
+		margin-top: 55px;
+		display: inline;
+		position: absolute;
+		margin-left: 20%;
+		left: 25px;
+		width: 20%;
+	}
+
+	#userA > p {
+		text-align: left;
+	}
+
+	#userA > div {
+		border-width: 17px 15px 0 0;
+		border-color: #bbb transparent transparent transparent;
+	}
+
+	#userB > p {
+		text-align: right;
+	}
+
+	#userB > div {
+		border-width: 0 15px 17px 0;
+		border-color: transparent #bbb transparent transparent;
+		right: 10px;
+	}
+
+	#parentConvo > li:nth-child(2) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #feae4a;
+	}
+
+	#parentConvo > li:nth-child(2) > div{
+		border-color: transparent #feae4a transparent transparent;
+	}
+
+	#parentConvo > li:nth-child(3) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #b83f1a;
+	}
+
+	#parentConvo > li:nth-child(3) > div{
+		border-color: #b83f1a transparent transparent transparent;
+	}
+
+	#parentConvo > li:nth-child(4) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #418869;
+	}	
+
+	#parentConvo > li:nth-child(4) > div{
+		border-color: transparent #418869 transparent transparent;
+	}
+/*codingSub*/
+	#convoBucket {
+		display: inline;
+		position: absolute;
+		margin-left: 40%;
+		margin-top: 0px;
+		left: 25px;
+		width: 20%;
+		color: #8a8a8a;
+		text-align: center;
+		height: 50px;
+		padding-top: 10px;
+        border-bottom-color: #b83f1a;
+		border-bottom-style: solid;
+		border-bottom-width: 3px;
+	}
+
+	#codingSub {
+		margin-top: 55px;
+		display: inline;
+		position: absolute;
+		margin-left: 40%;
+		left: 25px;
+		width: 20%;
+
+	}
+
+	#codingSub > li:nth-child(1) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #b83f1a;
+	}
+
+	#codingSub > li:nth-child(1) > div{
+		border-color: #b83f1a transparent transparent transparent;
+	}
+
+	#codingSub > li:nth-child(2) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #b83f1a;
+	}
+
+	#codingSub > li:nth-child(2) > div{
+		border-color: transparent #b83f1a transparent transparent;
+	}
+
+	#codingSub > li:nth-child(3) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #b83f1a;
+	}
+
+	#codingSub > li:nth-child(3) > div{
+		border-color: #b83f1a transparent transparent transparent;
+	}
+
+	#codingSub > li:nth-child(4) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #b83f1a;
+	}	
+
+	#codingSub > li:nth-child(4) > div{
+		border-color: transparent #b83f1a transparent transparent;
+	}
+/*schoolSub*/
+	#schoolHead {
+		/*POSITIONING*/
+			display: inline;
+			position: absolute;
+			margin-top: 0px;
+			margin-left: 60%;
+		left: 25px;
+		width: 20%;
+		color: #8a8a8a;
+		text-align: center;
+		height: 50px;
+		padding-top: 10px;
+		
+		-webkit-box-shadow:  0px px 10px 20px rgba(0, 0, 0, .65);  
+        box-shadow:  0px px 10px 20px rgba(0, 0, 0, .65);
+        border-bottom-color: #FCC074;
+		border-bottom-style: solid;
+		border-bottom-width: 3px;
+	}
+
+	#schoolSub {
+		/*POSITIONING*/
+			display: inline;
+			position: absolute;
+			margin-top: 55px;
+			margin-left: 60%;
+		left: 25px;
+		width: 20%;
+	}
+
+	#schoolSub > li:nth-child(1) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #FCC074;
+	}
+
+	#schoolSub > li:nth-child(1) > div{
+		border-color: #FCC074 transparent transparent transparent;
+	}
+
+	#schoolSub > li:nth-child(2) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #FCC074;
+	}
+
+	#schoolSub > li:nth-child(2) > div{
+		border-color: transparent #FCC074 transparent transparent;
+	}
+
+	#schoolSub > li:nth-child(3) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #FCC074;
+	}
+
+	#schoolSub > li:nth-child(3) > div{
+		border-color: #FCC074 transparent transparent transparent;
+	}
+
+	#schoolSub > li:nth-child(4) > p{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		border-bottom-color: #FCC074;
+	}	
+
+	#schoolSub > li:nth-child(4) > div{
+		border-color: transparent #FCC074 transparent transparent;
+	}
+/*buckets*/
+	#buckets {
+		right: -120px;
+		position: absolute;
+		background-color: #eee;
+		-webkit-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+		width: 170px;
+		overflow: hidden;
+	}
+
+	#buckets:hover {
+		right: 0px;
+	}
+
+	#buckets > li {
+		height: 50px;
+	}
+
+	#buckets > li > h2 {
+		text-align: center;
+		color: white;
+		line-height: 50px;
+		width: 50px;
+		float: left;
+		height: 50px;
+		margin: 0;
+		display: inline;
+	}
+
+	#buckets > li > span {
+		width: 120px;
+		float: left;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		color: white;
+		font-family: 'Open Sans', sans-serif;
+		display: inline;
+	}
+
+	#all > h2 {
+		background-color: #bbb;
+	}
+
+	#all > span {
+		background-color: #ccc;
+	}
+
+	#school > h2 {
+		background-color: #feae4a;
+	}
+
+	#school > span {
+		background-color: #FCC074;
+	}
+
+	#coding > h2 {
+		background-color: #b83f1a;
+	}
+
+	#coding > span {
+		background-color: #E06D4A;
+	}
+
+	#work > h2 {
+		background-color: #418869;
+	}
+
+	#work > span {
+		background-color: #6DB093;
+	}
+
+	#new > h2 {
+		background-color: #ccc;
+	}
+
+	#new > span {
+		background-color: #ddd;
+	}
+/*login*/
+	#box {
+		width: 300px;
+		background-color: #eee;
+		margin-left: 37.5%;
+		margin-top: 10%;
+		padding: 20px;
+		-webkit-box-shadow:  0px 0px 50px 5px rgba(0, 0, 0, .65);
+        box-shadow:  0px 0px 50px 5px rgba(0, 0, 0, .65);
+	}
+
+	#box > img {
+		width: 300px;
+	}
+
+	#box > div {
+		display: inline;
+		font-family: 'Open Sans', sans-serif;
+		text-align: center;
+		position: relative;
+	}
+
+	#box > div > input {
+		font-family: 'Open Sans', sans-serif;
+		margin-bottom: 10px;
+	}
+
+	#login-button,
+	#create-account {
+		background-color: #ddd;
+		border-style: solid;
+		border-color: #ccc;
+		border-width: 1px;
+	}
+
+	#login-button:hover,
+	#create-account:hover {
+		background-color: #ccc;
+		border-color: #bbb;
+	}
+
+	#login-button:active,
+	#create-account:active {
+		background-color: #bbb;
+		border-color: #aaa;
+	}

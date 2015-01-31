@@ -1,0 +1,53 @@
+h1 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 100;
+}
+
+#box {
+	width: 80%;
+	background-color: #eee;
+	margin: 0 auto;
+	padding: 5%;
+	-webkit-box-shadow:  0px 0px 50px 5px rgba(0, 0, 0, .65);
+    box-shadow:  0px 0px 50px 5px rgba(0, 0, 0, .65);
+}
+
+#box > img {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#box > h1 {
+	width: 100%;
+	display: inline;
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+}
+
+#box > div > input,
+#box > div > a > input {
+	font-family: 'Open Sans', sans-serif;
+	width: 80%;
+	margin: 0 auto 3% auto;
+}
+
+#login-button,
+#create-account {
+	background-color: #ddd;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+}
+
+#login-button:hover,
+#create-account:hover {
+	background-color: #ccc;
+	border-color: #bbb;
+}
+
+#login-button:active,
+#create-account:active {
+	background-color: #bbb;
+	border-color: #aaa;
+}

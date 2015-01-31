@@ -1,0 +1,156 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>plexis</title>
+		<link rel="icon" type="image/ico" href="img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="http://case.am/plexis/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="global.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!--userList-->
+			<ul id="userList">
+				<!--logo-->
+				<li id="logo"><img src="img/logo.png"></li>
+				<li id="newUser">
+					<input type="text" name="newUser" id="compose" placeholder="Who to message?">
+				</li>
+				<li>
+					<h1>James</h1>
+					<p>Codeday is really cool!</p>
+				</li>
+				<li id="active">
+					<h1>Yash</h1>
+					<p>I want to talk about that deadline at wo...</p>
+				</li>
+				<li>
+					<h1>Tyler</h1>
+					<p>StudentRND rocks. It uses Framebase.</p>
+				</li>
+				<li>
+					<h1>Jenna</h1>
+					<p>I'm the only chic here.</p>
+				</li>
+				<li>
+					<h1>Chris</h1>
+					<p>My name's Chris.</p>
+				</li>
+				<li>
+					<h1>Kareem</h1>
+					<p>Yash said "Hi" to me, I didn't respond.</p>
+				</li>
+				<li>
+					<h1>Connor</h1>
+					<p>Whats going on?</p>
+				</li>
+			</ul>
+		<!--parentConvo-->
+			<h1 class="user" id="yashplorer">Yash Plorer</h1>
+			<ul class="convo" id="parentConvo">
+				<li id="userA">
+					<p>Hey Yash, whats up?</p><div></div>
+				</li>
+
+				<li id="userB" data-type="bucket-1">
+					<p>I want to talk about that project at school.</p><div></div>
+				</li>
+				<li id="userA" data-type="bucket-2">
+					<p>I want to talk about that hackathon in July.</p><div></div>
+				</li>
+				<li  id="userB" data-type="bucket-3">
+					<p>I want to talk about that deadline at work.</p><div></div>
+				</li>
+				<li id="userA">
+					<span>
+						<input type="text" name="message" id="message" placeholder="enter your message...">
+						<input type="submit" id="send" value="">
+					</span>
+				</li>	
+			</ul>
+		<!--codingSub-->
+			<div id="codingConnector"></div>
+			<h1 class="bucket" id="convoBucket">Coding</h1>
+			<ul class="convo" id="codingSub">
+				<li id="userA">
+					<p>I want to talk about that hackathon in July.</p><div></div>
+				</li>
+
+				<li id="userB" >
+					<p>Are you at Codeday?</p><div></div>
+				</li>
+				<li id="userA">
+					<p>Yes, I am totally excited to do another one.</p><div></div>
+				</li>
+				<li  id="userB">
+					<p>Oh, what a coincidence, I am too.</p><div></div>
+				</li>
+				<li id="userA">
+					<span>
+						<input type="text" name="message" id="message" placeholder="enter your message...">
+						<input type="submit" id="send" value="">
+					</span>
+				</li>	
+			</ul>
+		<!--schoolSub-->
+			<div id="javaConnector"></div>
+			<h1 class="bucket" id="schoolHead">School</h1>
+			<ul class="convo" id="schoolSub">
+				<li id="userA">
+					<p>I want to talk about that project at school.</p><div></div>
+				</li>
+				<li id="userB" >
+					<p>Alright, what's up?</p><div></div>
+				</li>
+				<li id="userA">
+					<p>I don't understand the formulas they used on page four.</p><div></div>
+				</li>
+				<li  id="userB">
+					<p>Oh, I heard that the author threw those in there just to piss kids off, the teachers still haven't noticed. :P</p><div></div>
+				</li>
+				<li id="userA">
+					<span>
+						<input type="text" name="message" id="message" placeholder="enter your message...">
+						<input type="submit" id="send" value="">
+					</span>
+				</li>	
+			</ul>
+			</ul>
+		<!--buckets-->
+			<ul id="buckets">
+				<li class="bucket" id="all" data-id="bucket-0">
+					<h2>All</h2>
+					<span>View all chats</span>
+				</li>	
+				<li class="bucket" id="school" data-id="bucket-1">
+					<h2>S</h2>
+					<span>School</span>
+				</li>
+				<li class="bucket" id="coding" data-id="bucket-2">
+					<h2>C</h2>
+					<span>Coding</span>
+				</li>
+				<li class="bucket" id="work" data-id="bucket-3">
+					<h2>W</h2>
+					<span>Work</span>
+				</li>
+				<li class="bucket" id="new" data-id="bucket-4">
+					<h2>+</h2>
+					<span>Add New</span>
+				</li>
+			</ul>
+		<!--script-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
+			<script>
+				$('#buckets li').click(function() {
+					var $bucketID = $(this).attr("data-id");		
+					$('#parentConvo .chat').show();		
+					$('#parentConvo .chat[data-type!=' + $bucketID +']').hide();
+				});
+				
+				$('#all').click(function() {		
+					$('#parentConvo .chat').show(200);
+				});
+			</script>
+	</body>
+</html>
